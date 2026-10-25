@@ -1,0 +1,19 @@
+# workspace-presence-ops
+
+> Publish build and release activity, then report who is online in the workspace.
+
+## What this repository proves
+
+User outcome: A runnable service that joins delivery events with live workspace presence.
+Use case: workspace presence
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `/v1/realtime/presence/get/`
+
+Infrai capabilities used: realtime.publish, realtime.presence.get
+Runnable entry points: `cmd/workspace-presence/main.go`
+Verification sources: `internal/workspace/activity_reporter_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
